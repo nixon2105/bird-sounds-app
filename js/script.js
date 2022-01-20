@@ -10,17 +10,27 @@ const playSounds = (e) => {
   btn.classList.add('active');
   playBtn.classList.remove('play');
   playBtn.classList.add('pause');
-  // if (e.target.getAttribute('data-sound') === 'sinica') {
-  //   audio.src = '../assets/audio/sinica.mp3';
-  //   audio.play();
-  // }
+  if (e.target.getAttribute('data-sound') === 'sinica') {
+    audio.src = '../assets/audio/sinica.mp3';
+    audio.play();
+  }
   // if (e.target.getAttribute('data-sound') === 'drozd') {
   //   audio.src = '../assets/audio/drozd.mp3';
   //   audio.play();
   // }
 };
 
-const a = (e) => {
+const pauseSounds = (e) => {
+  if (e.target.classList.contains('pause')) {
+    playBtn.classList.remove('pause');
+    playBtn.classList.add('play');
+    audio.pause();
+  } else if (e.target.classList.contains('play')) {
+    playBtn.classList.remove('play');
+    playBtn.classList.add('pause');
+    audio.play();
+  }
+
   // btn.forEach((el) => console.log(el.getAttribute('data-sound')));
   // if (e.target.getAttribute('data-sound') === 'sinica') {
   //   audio.src = '../assets/audio/sinica.mp3';
@@ -31,3 +41,4 @@ const a = (e) => {
 // a();
 
 btn.addEventListener('click', playSounds);
+playBtn.addEventListener('click', pauseSounds);
