@@ -4,18 +4,18 @@ const playBtn = document.querySelector('.play');
 const item = document.querySelector('.main-nav__item');
 const main = document.querySelector('.main');
 
-const sounds = ['colibri', 'drozd', 'icterey', 'sinica', 'snegir'];
+const bgImages = ['solovey', 'drozd', 'zarynka', 'javoronok', 'slavka'];
 
 const audio = new Audio();
 
 const playSounds = (e) => {
-  playBtn.classList.toggle('pause');
+  playBtn.classList.add('pause');
   audio.play();
 };
 
 const pauseSounds = (e) => {
-  // playBtn.classList.add('pause');
-  // playBtn.classList.add('play');
+  playBtn.classList.remove('pause');
+  playBtn.classList.add('play');
   audio.pause();
 };
 
