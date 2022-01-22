@@ -47,6 +47,18 @@ body {
   align-items: center;
 }
 
+.header-logo {
+  width: 64px;
+  height: 67px;
+  background-image: url('../assets/images/logo.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+
 .main-nav__list {
   display: flex;
   justify-content: space-between;
@@ -104,6 +116,18 @@ body {
   width: 160px;
   height: 160px;
   background-image: url('../assets/images/pause.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+
+.btn__download {
+  width: 32px;
+  height: 32px;
+  background-image: url('../assets/images/download.png');
   background-repeat: no-repeat;
   background-size: contain;
   background-color: transparent;
