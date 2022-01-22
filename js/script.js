@@ -4,8 +4,6 @@ const playBtn = document.querySelector('.play');
 const item = document.querySelector('.main-nav__item');
 const main = document.querySelector('.main');
 
-const bgImages = ['solovey', 'drozd', 'zarynka', 'javoronok', 'slavka'];
-
 const audio = new Audio();
 
 const playSounds = (e) => {
@@ -20,6 +18,13 @@ const pauseSounds = (e) => {
 };
 
 const loadImage = () => {};
+
+const addActiveBtn = (e) => {
+  listBtn
+    .querySelectorAll('.main-nav__btn')
+    .forEach((el) => el.classList.remove('active'));
+  e.target.classList.add('active');
+};
 
 listBtn.addEventListener('click', (e) => {
   if (e.target.closest('.main-nav__btn')) {
@@ -50,3 +55,4 @@ listBtn.addEventListener('click', (e) => {
 });
 
 playBtn.addEventListener('click', pauseSounds);
+listBtn.addEventListener('click', addActiveBtn);
