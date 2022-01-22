@@ -14,6 +14,12 @@ const addActiveBtn = (e) => {
 
 const audio = new Audio();
 
+const playSounds = (e) => {
+  playBtn.classList.remove('play');
+  playBtn.classList.add('pause');
+  audio.play();
+};
+
 const toggleBtnSounds = () => {
   if (playBtn.classList.toggle('play')) {
     audio.pause();
@@ -52,7 +58,7 @@ listBtn.addEventListener('click', (e) => {
       main.style.backgroundImage = 'url(../assets/images/slavka.jpg)';
       logo.style.backgroundImage = 'url(../assets/images/icon-slavka.png)';
     }
-    toggleBtnSounds();
+    playSounds();
   }
 });
 
