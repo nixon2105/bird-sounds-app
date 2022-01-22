@@ -53,8 +53,6 @@ body {
   background-image: url('../assets/images/logo.png');
   background-repeat: no-repeat;
   background-size: contain;
-  background-color: transparent;
-  border: 0;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
 }
@@ -86,8 +84,8 @@ body {
   background: rgb(65, 97, 84);
 }
 
-.download {
-  cursor: pointer;
+.main-nav__btn.active {
+  background: rgb(97, 94, 65);
 }
 
 .main {
@@ -142,7 +140,6 @@ body {
   justify-content: space-between;
   align-items: center;
   width: calc(100% - 40px);
-  margin: 0 auto;
   padding: 5px 20px;
   font-size: 20px;
 }
@@ -160,8 +157,4 @@ body {
   background-image: url('../assets/images/rss.svg');
   transition: 0.3s;
   cursor: pointer;
-}
-
-.main-nav__btn.active {
-  background: rgb(97, 94, 65);
 }
