@@ -4,26 +4,23 @@ const playBtn = document.querySelector('.play');
 const item = document.querySelector('.main-nav__item');
 const main = document.querySelector('.main');
 
-const audio = new Audio();
-
-const playSounds = (e) => {
-  playBtn.classList.add('pause');
-  audio.play();
-};
-
-const pauseSounds = (e) => {
-  playBtn.classList.remove('pause');
-  playBtn.classList.add('play');
-  audio.pause();
-};
-
-const loadImage = () => {};
-
 const addActiveBtn = (e) => {
   listBtn
     .querySelectorAll('.main-nav__btn')
     .forEach((el) => el.classList.remove('active'));
   e.target.classList.add('active');
+};
+
+const audio = new Audio();
+
+const toggleBtnSounds = () => {
+  if (playBtn.classList.toggle('play')) {
+    audio.pause();
+  }
+  if (playBtn.classList.toggle('pause')) {
+    audio.currentTime = 0;
+    audio.play();
+  }
 };
 
 listBtn.addEventListener('click', (e) => {
@@ -49,10 +46,9 @@ listBtn.addEventListener('click', (e) => {
       audio.src = '../assets/audio/slavka.mp3';
       main.style.backgroundImage = 'url(../assets/images/slavka.jpg)';
     }
-    playSounds();
-    // loadImage();
+    toggleBtnSounds();
   }
 });
 
-playBtn.addEventListener('click', pauseSounds);
+playBtn.addEventListener('click', toggleBtnSounds);
 listBtn.addEventListener('click', addActiveBtn);

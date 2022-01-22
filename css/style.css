@@ -109,6 +109,7 @@ body {
   background-color: transparent;
   border: 0;
   cursor: pointer;
+  transition: all ease 0.3s;
 }
 
 .footer {
