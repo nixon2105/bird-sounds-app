@@ -4,6 +4,7 @@ const btn = document.querySelector('.main-nav__btn');
 const playBtn = document.querySelector('.play');
 const item = document.querySelector('.main-nav__item');
 const main = document.querySelector('.main');
+const download = document.querySelector('.btn__download');
 
 const addActiveBtn = (e) => {
   listBtn
