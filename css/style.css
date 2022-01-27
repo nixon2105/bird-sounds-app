@@ -8,18 +8,6 @@
 body {
   font-family: 'Lato', sans-serif;
   font-size: 16px;
-  background-image: -moz-linear-gradient(
-    45deg,
-    rgb(189, 255, 234),
-    rgb(255, 209, 189)
-  );
-
-  background-image: -webkit-linear-gradient(
-    45deg,
-    rgb(189, 255, 234),
-    rgb(255, 209, 189)
-  );
-
   background-image: linear-gradient(
     45deg,
     rgb(189, 255, 234),
@@ -61,7 +49,6 @@ body {
   display: flex;
   justify-content: space-between;
   list-style-type: none;
-  font-family: 'Lato', sans-serif;
 }
 
 .main-nav__item:not(:last-child) {
