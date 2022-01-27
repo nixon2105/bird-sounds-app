@@ -33,31 +33,37 @@ const toggleBtnSounds = () => {
 
 listBtn.addEventListener('click', (e) => {
   if (e.target.closest('.main-nav__btn')) {
-    let action = e.target.getAttribute('data-item');
-    if (action === 'solovey') {
-      audio.src = '../assets/audio/solovey.mp3';
-      main.style.backgroundImage = 'url(../assets/images/solovey.jpg)';
-      logo.style.backgroundImage = 'url(../assets/images/icon-solovey.png)';
-    }
-    if (action === 'drozd') {
-      audio.src = '../assets/audio/drozd.mp3';
-      main.style.backgroundImage = 'url(../assets/images/drozd.jpg)';
-      logo.style.backgroundImage = 'url(../assets/images/icon-drozd.png)';
-    }
-    if (action === 'malinovka') {
-      audio.src = '../assets/audio/zarynka.mp3';
-      main.style.backgroundImage = 'url(../assets/images/zarynka.jpg)';
-      logo.style.backgroundImage = 'url(../assets/images/icon-malinovka.png)';
-    }
-    if (action === 'javoronok') {
-      audio.src = '../assets/audio/javoronok.mp3';
-      main.style.backgroundImage = 'url(../assets/images/javoronok.jpg)';
-      logo.style.backgroundImage = 'url(../assets/images/iconn-zarynka.png)';
-    }
-    if (action === 'slavka') {
-      audio.src = '../assets/audio/slavka.mp3';
-      main.style.backgroundImage = 'url(../assets/images/slavka.jpg)';
-      logo.style.backgroundImage = 'url(../assets/images/icon-slavka.png)';
+    let action = e.target.dataset.item;
+    switch (action) {
+      case 'solovey':
+        audio.src = '../assets/audio/solovey.mp3';
+        main.style.backgroundImage = 'url(../assets/images/solovey.jpg)';
+        logo.style.backgroundImage = 'url(../assets/images/icon-solovey.png)';
+        break;
+
+      case 'drozd':
+        audio.src = '../assets/audio/drozd.mp3';
+        main.style.backgroundImage = 'url(../assets/images/drozd.jpg)';
+        logo.style.backgroundImage = 'url(../assets/images/icon-drozd.png)';
+        break;
+
+      case 'malinovka':
+        audio.src = '../assets/audio/zarynka.mp3';
+        main.style.backgroundImage = 'url(../assets/images/zarynka.jpg)';
+        logo.style.backgroundImage = 'url(../assets/images/icon-malinovka.png)';
+        break;
+
+      case 'javoronok':
+        audio.src = '../assets/audio/javoronok.mp3';
+        main.style.backgroundImage = 'url(../assets/images/javoronok.jpg)';
+        logo.style.backgroundImage = 'url(../assets/images/iconn-zarynka.png)';
+        break;
+
+      case 'slavka':
+        audio.src = '../assets/audio/slavka.mp3';
+        main.style.backgroundImage = 'url(../assets/images/slavka.jpg)';
+        logo.style.backgroundImage = 'url(../assets/images/icon-slavka.png)';
+        break;
     }
     playSounds();
   }
